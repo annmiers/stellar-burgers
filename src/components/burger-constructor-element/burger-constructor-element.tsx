@@ -6,7 +6,7 @@ import {
   constructorSelector,
   deleteItem,
   updateAll
-} from '../../services/slices/constructor';
+} from '../../services/slices/constructor/constructor';
 import { TConstructorIngredient } from '@utils-types';
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(

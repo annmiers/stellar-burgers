@@ -1,4 +1,4 @@
-import { orderBurgerApi } from '@api';
+import { orderBurgerApi } from '../../../utils/burger-api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 
@@ -13,7 +13,7 @@ export interface TCreateOrderState {
   error: string | undefined;
 }
 
-const initialState: TCreateOrderState = {
+export const initialState: TCreateOrderState = {
   orderRequest: false,
   orderModalData: null,
   error: undefined
@@ -46,3 +46,5 @@ export const createOrderSlice = createSlice({
 
 export const { resetOrder } = createOrderSlice.actions;
 export const { orderRequest, orderModalData } = createOrderSlice.selectors;
+
+export const createOrderReducer = createOrderSlice.reducer;
