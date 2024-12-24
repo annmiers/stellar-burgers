@@ -6,14 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import {
   clearAll,
   constructorSelector
-} from '../../services/slices/constructor';
+} from '../../services/slices/constructor/constructor';
 import {
   orderModalData as getOrderModalData,
   orderRequest as getOrderRequest,
   createOrder,
   resetOrder
-} from '../../services/slices/order';
-import { isAuthCheckedSelector } from '../../services/slices/user';
+} from '../../services/slices/order/order';
+import { isAuthCheckedSelector } from '../../services/slices/user/user';
 
 export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
